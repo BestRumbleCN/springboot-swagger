@@ -17,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Swagger2Config {
 
 	@Bean
-	public Docket createFittingroomDocket() {
+	public Docket createDocket() {
 		return new Docket(DocumentationType.SWAGGER_2).groupName("用户信息").apiInfo(userApiInfo()).select()
 				.apis(RequestHandlerSelectors.basePackage("pri.fly.leaning.controller"))
 				.paths(PathSelectors.any()).build();
@@ -28,4 +28,5 @@ public class Swagger2Config {
 				.contact(new Contact("fly", "https://github.com/BestRumbleCN", "flyxie2009@foxmail.com")).version("1.0")
 				.build();
 	}
+
 }
